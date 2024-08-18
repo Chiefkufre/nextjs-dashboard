@@ -1,3 +1,5 @@
+import '@/app/ui/global.css'
+import { inter } from '@/app/ui/fonts';
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +7,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+      </head>
+      <body className={`${inter.className} antialiased hover:subpixel-antialiased`}>{children}</body>
     </html>
   );
 }
